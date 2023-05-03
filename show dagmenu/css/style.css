@@ -1,0 +1,161 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --font-size--xsmall: 1rem; /* 10px */
+  --font-size--normal: 1.4rem; /* 14px */
+  --font-size--small: 1.6rem; /* 16px */
+  --font-size--default: 1.8rem; /* 18px */
+  --font-size--medium: 2rem; /* 20px */
+  --font-size--large: 2.4rem; /* 24px */
+  --font-size--xlarge: 3.2rem; /* 32px */
+  --color-red: rgb(183, 12, 48);
+  --color-red--opacity: rgba(183, 12, 48, 0.3);
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  flex-direction: column;
+  /* max-width: 725px; */
+}
+
+h3 {
+  margin: 0;
+  font-size: var(--font-size--small);
+  padding: 0.25rem 0.75rem;
+  text-align: center;
+}
+
+.keuze-zaal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+  align-self: center;
+  padding: 1.5rem;
+  /* margin-top: 1rem; */
+  border: 3px solid var(--color-red);
+  border-radius: 5px;
+  max-width: 300px;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  font-size: var(--font-size--small);
+}
+li {
+  margin: 0.5rem 0;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid var(--color-red);
+  border-radius: 5px;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 15.5rem;
+  padding: 0 0.5rem;
+  max-width: 725px;
+}
+
+.injected {
+  display: flex;
+  height: 17rem;
+  border: 2px solid var(--color-red);
+  border-radius: 5px;
+  padding: 0.75rem;
+  margin: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: var(--font-size--normal);
+}
+
+.language {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  /* align-self: flex-start; */
+  margin-bottom: 0;
+  padding: 1rem;
+  max-width: 100%;
+}
+
+.language a {
+  margin: 2rem 1rem;
+  /* max-width: 725px; */
+}
+
+img {
+  margin-top: 0.125rem;
+  width: 3.5rem;
+}
+
+.logo-round {
+  border-radius: 9%;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+body {
+  margin: 0 auto;
+  background: rgb(27, 27, 27);
+  color: rgb(255, 255, 255);
+  /* display: flex;
+  flex-direction: column; */
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+}
+
+.bold {
+  font-weight: 900;
+}
+.hidden {
+  display: none;
+}
+
+.opacity-change {
+  opacity: 0.4;
+}
+
+.red-background {
+  background: var(--color-red--opacity);
+}
+
+li:hover {
+  background: var(--color-red--opacity);
+}
+
+@media only screen and (min-width: 725px) {
+  body {
+    width: 725px;
+  }
+  .injected {
+    height: 6rem;
+  }
+
+  /* section {
+    top: 14rem;
+  } */
+}
